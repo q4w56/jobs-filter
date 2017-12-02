@@ -1,0 +1,22 @@
+.x-line{
+	float: right;
+	font-size: 14px;
+}
+.x-actions > span{
+	cursor: pointer;
+}
+.x-good, .x-maybe, .x-no{
+	padding: 1px 3px;
+}
+
+.x-good{
+	background: #faf;
+}
+
+.x-maybe{
+	background: #FFEA95;
+}
+
+.x-no{
+	background: #8ab1ff;
+}

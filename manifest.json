@@ -1,0 +1,13 @@
+{
+    "name": "jobs-filter",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "content_scripts": [{
+      "matches": ["https://www.104.com.tw/*"],
+      "js": ["dist/bundle.js"],
+      "css": ["src/main.css"]
+    }],
+    "permissions": [
+      "storage"
+    ]
+}

@@ -1,0 +1,41 @@
+// var webpack = require('webpack')
+
+module.exports = {
+  entry: './src/main.js',
+  output: {
+    filename : 'bundle.js',
+    path : __dirname + '/dist'
+  },
+  resolve: {
+    alias: {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat'
+    }
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.js[x]?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            [
+              'env',
+              {
+                targets: {browsers: ['Chrome >= 58']}
+              }
+            ]
+          ],
+          plugins: [
+            ['transform-react-jsx', {'pragma': 'Preact.h'}],
+            // ['transform-object-rest-spread'],
+          ]
+        }
+      }
+    ]
+  },
+  devtool: 'source-map',
+  plugins: [],
+}
